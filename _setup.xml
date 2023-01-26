@@ -1,0 +1,36 @@
+<wap-provisioningdoc>
+<characteristic type="Install">
+<parm name="InstallPhase" value="install" />
+<parm name="OSVersionMin" value="4.0" />
+<parm name="OSVersionMax" value="6.99" />
+<parm name="BuildNumberMin" value="0" />
+<parm name="BuildNumberMax" value="-536870912" />
+<parm name="AppName" value="Stickler FlashSMS" />
+<parm name="InstallDir" value="%CE1%\FlashSMS" translation="install" />
+<parm name="NumDirs" value="3" />
+<parm name="NumFiles" value="1" />
+<parm name="NumRegKeys" value="0" />
+<parm name="NumRegVals" value="0" />
+<parm name="NumShortcuts" value="1" />
+</characteristic>
+<characteristic type="FileOperation">
+<characteristic type="%InstallDir%" translation="install">
+<characteristic type="MakeDir" />
+<characteristic type="FlashSMS.exe" translation="install">
+<characteristic type="Extract">
+<parm name="Source" value="FlashSMS.001" />
+</characteristic>
+</characteristic>
+</characteristic>
+<characteristic type="%CE11%" translation="install">
+<characteristic type="MakeDir" />
+<characteristic type="FlashSMS.lnk" translation="install">
+<characteristic type="Shortcut">
+<parm name="Source" value="%InstallDir%\FlashSMS.exe" translation="install" />
+</characteristic>
+</characteristic>
+</characteristic>
+</characteristic>
+<characteristic type="Registry">
+</characteristic>
+</wap-provisioningdoc>
